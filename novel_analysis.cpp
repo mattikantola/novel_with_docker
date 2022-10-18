@@ -4,6 +4,7 @@
 #include<sstream>
 #include<regex>
 #include<chrono>
+#include<omp.h>
 
 using std::string;
 
@@ -12,6 +13,7 @@ string longest_common_substring(string& first, string& second){
     string longest = "";
     int match_length = 1;
 
+    #pragma omp parallel for
     for (int start = 0; start < first.length()-match_length; start++){
 
         for (int stop = start + match_length; stop<first.length(); stop++){
