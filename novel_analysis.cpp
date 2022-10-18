@@ -52,8 +52,8 @@ string read_book(string filename){
 
 int main(void){
 
-    string first_book = read_book("pride.txt");
-    string second_book = read_book("wonderland.txt");
+    string first_book = read_book("dracula.txt.utf-8");
+    string second_book = read_book("musketeers.txt.utf-8");
 
     std::cout << first_book.length() << " and " << second_book.length() << std::endl;
 
