@@ -10,6 +10,13 @@ using std::string;
 
 string longest_common_substring(string& first, string& second){
 
+    /* The purpose of this procedure is to find the longest common substring of two strings. It is done by checking all the substrings of 
+        the first string. If a substring is found in the second string, its length is increased by one and a new check is performed. 
+        When a substring is found, its length is checked against the length of the current longest substring. If the new match is longer than
+        its predecessor, its length is saved. The saved value is used as a new starting length of the substring check, because the algorithm is no longer
+        interested in shorter substrings than the longest found substring.    
+     */
+
     string longest = "";
     int match_length = 1;
 
@@ -33,6 +40,8 @@ string longest_common_substring(string& first, string& second){
 }
 
 string read_book(string filename){
+
+    /* This procedure reads a file and joins it into a string, replacing all tabs and newlines with a single whitespace. */
 
     std::ifstream file(filename);
 
