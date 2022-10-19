@@ -57,9 +57,6 @@ int main(void){
 
     std::cout << first_book.length() << " and " << second_book.length() << std::endl;
 
-    string first_test = "Matti is a good guy";
-    string second_test = "Nothing beats a good book";
-    std::cout << longest_common_substring(first_test, second_test) << std::endl;
     auto start = std::chrono::high_resolution_clock::now();
     std::cout << longest_common_substring(first_book, second_book) << std::endl;
     auto stop = std::chrono::high_resolution_clock::now();
